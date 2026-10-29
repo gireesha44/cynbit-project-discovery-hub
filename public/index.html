@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Cynbit Project Discovery Hub prototype" />
+  <title>Cynbit Project Discovery Hub</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#"><span class="mark">C</span><span>CYNBIT</span></a>
+    <div class="nav-right"><span class="status"><i></i> Discovery system online</span><a href="#discovery" class="mini-btn">Start discovery ↗</a></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PROJECT INTELLIGENCE • PROTOTYPE</div>
+      <h1>Turn an idea into a<br><span>technical blueprint.</span></h1>
+      <p class="lead">A guided discovery experience that helps prospective clients clarify scope, identify relevant Cynbit capabilities, and create a structured brief before the first call.</p>
+      <div class="hero-actions"><a class="primary" href="#discovery">Build my blueprint <b>→</b></a><a class="secondary" href="#why">Why this improves conversion</a></div>
+      <div class="metrics">
+        <div><strong>4</strong><span>guided steps</span></div>
+        <div><strong>&lt; 3 min</strong><span>to complete</span></div>
+        <div><strong>1</strong><span>actionable brief</span></div>
+      </div>
+    </section>
+
+    <section class="panel" id="discovery">
+      <div class="panel-head">
+        <div><span class="kicker">DISCOVERY ENGINE</span><h2>Tell us what you're building.</h2></div>
+        <div class="progress-label"><span id="stepText">Step 1 of 4</span><div class="bar"><i id="bar"></i></div></div>
+      </div>
+
+      <form id="discoveryForm">
+        <div class="step active" data-step="1">
+          <label class="field-title">01 / Choose the closest project type</label>
+          <div class="cards">
+            <button type="button" class="choice" data-value="AI Automation"><b>✦</b><span><strong>AI Automation</strong><small>Agents, LLM workflows, intelligent operations</small></span></button>
+            <button type="button" class="choice" data-value="Full-Stack Product"><b>⌘</b><span><strong>Full-Stack Product</strong><small>Web apps, mobile platforms, internal tools</small></span></button>
+            <button type="button" class="choice" data-value="SaaS Platform"><b>◫</b><span><strong>SaaS Platform</strong><small>Multi-tenant products and business platforms</small></span></button>
+            <button type="button" class="choice" data-value="Cloud & Scale"><b>☁</b><span><strong>Cloud & Scale</strong><small>Infrastructure, migration, performance</small></span></button>
+            <button type="button" class="choice" data-value="Growth & SEO"><b>↗</b><span><strong>Growth & SEO</strong><small>Technical SEO, CRM, conversion systems</small></span></button>
+          </div>
+          <input type="hidden" id="category" required />
+        </div>
+
+        <div class="step" data-step="2">
+          <label class="field-title" for="goal">02 / What outcome do you want?</label>
+          <textarea id="goal" maxlength="1200" placeholder="Example: We want to reduce manual lead qualification by automatically analyzing inbound requests, scoring them, and routing high-intent leads to our sales team..." required></textarea>
+          <div class="hint"><span>Describe the business problem, not just the technology.</span><span id="count">0 / 1200</span></div>
+        </div>
+
+        <div class="step" data-step="3">
+          <label class="field-title">03 / Delivery context</label>
+          <div class="grid2">
+            <div><label>Estimated budget</label><select id="budget" required><option value="">Select range</option><option>Under ₹1L</option><option>₹1L – ₹5L</option><option>₹5L – ₹15L</option><option>₹15L+</option><option>Need guidance</option></select></div>
+            <div><label>Target timeline</label><select id="timeline" required><option value="">Select timeline</option><option>ASAP / urgent</option><option>2–4 weeks</option><option>1–3 months</option><option>3–6 months</option><option>Exploring</option></select></div>
+          </div>
+          <div class="grid2 contact-grid">
+            <div><label>Your name</label><input id="name" placeholder="Your name" required /></div>
+            <div><label>Work email</label><input id="email" type="email" placeholder="you@company.com" required /></div>
+          </div>
+        </div>
+
+        <div class="step" data-step="4">
+          <div id="loading" class="loading hidden"><div class="spinner"></div><p>Mapping your requirements to Cynbit capabilities…</p></div>
+          <div id="result" class="result hidden">
+            <span class="kicker">RECOMMENDED BLUEPRINT</span>
+            <h3 id="resultTitle"></h3>
+            <p id="blueprint"></p>
+            <div class="result-grid"><div><small>Complexity</small><strong id="complexity"></strong></div><div><small>Suggested next step</small><strong>Technical discovery</strong></div></div>
+            <div><small class="muted">Relevant capabilities</small><div id="services" class="tags"></div></div>
+            <div class="submit-box"><p><strong>Ready to continue?</strong><br><span>Save this brief and receive an inquiry reference.</span></p><button type="button" id="submitInquiry" class="primary">Submit discovery brief →</button></div>
+            <div id="success" class="success hidden"></div>
+          </div>
+        </div>
+
+        <div class="form-nav"><button type="button" id="back" class="secondary hidden">← Back</button><button type="button" id="next" class="primary">Continue →</button></div>
+        <div id="error" class="error hidden"></div>
+      </form>
+    </section>
+
+    <section class="why" id="why">
+      <span class="kicker">WHY THIS IMPROVEMENT</span>
+      <h2>From a generic inquiry to a qualified conversation.</h2>
+      <div class="why-grid">
+        <article><b>01</b><h3>Less friction</h3><p>Guided choices reduce the blank-page problem for visitors who know their business challenge but not the technical solution.</p></article>
+        <article><b>02</b><h3>Better qualification</h3><p>Budget, timeline and desired outcome give the delivery team useful context before the first conversation.</p></article>
+        <article><b>03</b><h3>Immediate value</h3><p>Visitors receive a tailored capability map instead of submitting a form and waiting without feedback.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><div class="brand"><span class="mark">C</span><span>CYNBIT</span></div><p>Assessment prototype • Full Stack Developer Intern</p><p>Built by Gireesha Pentakota</p></footer>
+  <script src="/app.js"></script>
+</body>
+</html>
