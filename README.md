@@ -4,6 +4,8 @@ A full-stack prototype built for **Cynbit Technologies' Full Stack Developer Int
 
 The project improves Cynbit's initial client-discovery experience by turning a conventional inquiry into a **guided, structured project discovery flow**.
 
+**DEMO LINK** : https://cynbit-project-discovery-hub.onrender.com
+
 ---
 
 ## 🚀 The Idea
