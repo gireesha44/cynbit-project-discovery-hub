@@ -210,4 +210,4 @@ A detailed explanation of the problem, architecture, implementation decisions, s
 B.Tech Computer Science & Engineering  
 VNR Vignana Jyothi Institute of Engineering & Technology
 
-Built as part of the **Cynbit Technologies — Full Stack Developer Intern Technical Assessment (October 2026)**.
+Built as part of the **Cynbit Technologies - Full Stack Developer Intern Technical Assessment (October 2026)**.
